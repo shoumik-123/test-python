@@ -1,0 +1,29 @@
+{% extends 'Common/base.html' %}
+
+{% block title %}Create user Page {% endblock title %}
+
+{% block content %}
+
+<h1 class="mt-5 text-center">Create user</h1>
+<form class="container" method="post" action="" >
+
+    {% csrf_token %}
+
+    <div class="row">
+      <div class="col-md-6 mt-5">
+        <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+      </div>
+      <div class="col-md-6 mt-5">
+        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+      </div>
+      <div class="col-md-6 mt-5">
+        <input type="email" class="form-control" placeholder="Email" aria-label="email">
+      </div>
+      <div class="col-md-6 mt-5">
+        <input type="text" class="form-control" placeholder="Address" aria-label="address">
+      </div>
+    </div>
+    <button class="btn btn-outline-dark btn-md mt-5">Submit</button>
+</form>
+
+{% endblock content %}
